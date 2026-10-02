@@ -1,10 +1,22 @@
-for i in range(3, 105):
-    if i % 5 == 0 and i % 7 == 0:
-        print("FizzBuzz")
-    elif i % 3 == 0:
-        print("Fizz")
-    elif i % 5 == 0:
-        print("Buzz")
+def fizzbuzz_value(number):
+    """Return the FizzBuzz value for a given number."""
+    
+    if number % 3 == 0 and number % 5 == 0:
+        return "FizzBuzz"
+    elif number % 3 == 0:
+        return "Fizz"
+    elif number % 5 == 0:
+        return "Buzz"
     else:
-        print(i)
+        return str(number)
 
+
+def run_fizzbuzz(start=1, end=100):
+    """Run FizzBuzz for a range of numbers."""
+    
+    for number in range(start, end + 1):
+        print(fizzbuzz_value(number))
+
+
+if __name__ == "__main__":
+    run_fizzbuzz()
